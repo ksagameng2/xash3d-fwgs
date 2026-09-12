@@ -51,13 +51,11 @@ typedef enum
 
 platform_orientation_t Platform_GetDisplayOrientation( void );
 
-// legacy iOS port functions
 #if XASH_IOS
-int IOS_GetArgs( char ***argv );
 const char *IOS_GetDocsDir( void );
 const char *IOS_GetExecDir( void );
-void IOS_LaunchDialog( void );
-#endif // TARGET_OS_IOS
+void IOS_PrepareView( void );
+#endif // XASH_IOS
 
 #if XASH_WIN32 || XASH_LINUX
 #define XASH_PLATFORM_HAVE_STATUS 1
